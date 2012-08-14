@@ -1,5 +1,8 @@
+<% show_location = true if local_assigns[:show_location].nil? %>
 <tr>
   <td><%= link_to work.name, work.url %></td>
   <td><%= work.artist.name %></td>
-  <td><%= work.location.name %></td>
+  <% if show_location %>
+    <td><%= link_to work.location.name, location_path(work.location.id) %></td>
+  <% end %>
 </tr>

@@ -1,0 +1,13 @@
+<h1><%= @location.name %></h1>
+
+<h2>Works at this location:</h2>
+<table>
+  <tr>
+    <th>Name of work</th>
+    <th>Artist</th>
+  </tr>
+
+  <%= render :partial => 'works/work', :collection => @works, :locals => {:show_location => false} %>
+</table>
+
+<%= will_paginate @works %>
