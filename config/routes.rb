@@ -1,7 +1,11 @@
 Artchart::Application.routes.draw do
   root :to => 'home#index'
 
-  resources :works, :only => [:index]
+  resources :works, :only => [:index] do
+    collection do
+      get 'search'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

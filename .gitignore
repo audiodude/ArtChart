@@ -4,6 +4,10 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile ~/.gitignore_global
 
+config/development.sphinx.conf
+log/searchd.development.pid
+public/assets
+
 # Ignore bundler config
 /.bundle
 
